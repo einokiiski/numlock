@@ -1,14 +1,20 @@
-'use strict';
+'use strict'
 
-const express = require('express');
+const express = require('express')
 
 const PORT = 8080;
 const HOST = '0.0.0.0';
+const app = express()
+const parser = require('body-parser')
+app.use(parser.urlencoded())
+app.use(parser.json())
 
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello World');
+app.post('/test', (req, res) => {
+    if (req.body.numbers === '1234') {
+        res.status(200).send(JSON.stringify({message: 'correct'}))
+    } else {
+        res.status(200).send(JSON.stringify({message: 'incorrect'}))
+    }
 });
 
 app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
