@@ -9,3 +9,14 @@ services:
       - /usr/app/node_modules
     ports: 
       - 3000:3000
+    depends_on:
+      - server
+  server:
+    build:
+      context: ./server/
+    command: node src/index.js
+    volumes:
+      - ./server/:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - 8080:8080
