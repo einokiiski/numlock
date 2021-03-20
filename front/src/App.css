@@ -56,5 +56,6 @@ p {
 }
 
 .lock-icon-button {
+  padding: 9px;
   color: red;
 }
