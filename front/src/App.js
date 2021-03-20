@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 import ReactDOM from 'react-dom'
 import { BsFillLockFill } from 'react-icons/bs'
 import { createStore } from 'redux'
@@ -19,7 +19,7 @@ const numpadStore = (numbers = '', action) => {
   }
 }
 
-const store = createStore(numpadStore);
+const store = createStore(numpadStore)
 
 const testInput = async (numbers) => {
   if (numbers.length === 4) {
@@ -39,7 +39,7 @@ const testInput = async (numbers) => {
 }
 
 const App = () => {
-  testInput(store.getState());
+  testInput(store.getState())
 
   return (
     <div className="container">
@@ -69,4 +69,4 @@ const renderApp = () => {
 renderApp()
 store.subscribe(renderApp)
 
-export default App;
+export default App
