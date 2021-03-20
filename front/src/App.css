@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  padding-left: 40%;
+  padding-right: 40%;
+}
+
+button {
+  width: 33%;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.lock-icon-button {
+  color: red;
+}
